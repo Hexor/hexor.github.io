@@ -5,16 +5,45 @@
   
   <title>Test 1 | 河童的河</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="123456789101112131415161718192021222324252627282930313233&amp;lt;?php namespace App\Http\V1_0\Controllers;use App\Repositories\Interfaces\UserTechStarsInterface;use JWTAuth;use App\Http\V1_0\Transformers\">
+  <meta name="description" content="Quick Start
+Create a new post
+Run server
+Generate static files
+Deploy to remote sites
+
+
+
+
+Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems wh">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Test 1">
 <meta property="og:url" content="http://hexor.github.io/2016/11/26/new-article/index.html">
 <meta property="og:site_name" content="河童的河">
-<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233&amp;lt;?php namespace App\Http\V1_0\Controllers;use App\Repositories\Interfaces\UserTechStarsInterface;use JWTAuth;use App\Http\V1_0\Transformers\">
-<meta property="og:updated_time" content="2016-11-26T08:28:57.000Z">
+<meta property="og:description" content="Quick Start
+Create a new post
+Run server
+Generate static files
+Deploy to remote sites
+
+
+
+
+Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems wh">
+<meta property="og:image" content="http://hexor.github.io/images/rivergod.png">
+<meta property="og:updated_time" content="2016-11-26T11:00:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Test 1">
-<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233&amp;lt;?php namespace App\Http\V1_0\Controllers;use App\Repositories\Interfaces\UserTechStarsInterface;use JWTAuth;use App\Http\V1_0\Transformers\">
+<meta name="twitter:description" content="Quick Start
+Create a new post
+Run server
+Generate static files
+Deploy to remote sites
+
+
+
+
+Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems wh">
+<meta name="twitter:image" content="http://hexor.github.io/images/rivergod.png">
 <meta name="twitter:creator" content="@https://twitter.com/Hex_iN_gaMe">
   
   
@@ -90,11 +119,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span> <span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Http</span>\<span class="title">V1_0</span>\<span class="title">Controllers</span>;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Repositories</span>\<span class="title">Interfaces</span>\<span class="title">UserTechStarsInterface</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">JWTAuth</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Http</span>\<span class="title">V1_0</span>\<span class="title">Transformers</span>\<span class="title">UserTechStarTransformer</span>;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserTechStarsController</span> <span class="keyword">extends</span> <span class="title">ApiController</span></span></div><div class="line">{</div><div class="line">  <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(UserTechStarsInterface $userTechStarsInterface)</span></span></div><div class="line">  {</div><div class="line">    <span class="keyword">$this</span>-&gt;userTechStarsInterface = $userTechStarsInterface;</div><div class="line">  }</div><div class="line"></div><div class="line">  <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">show</span><span class="params">($userId)</span></span></div><div class="line">  {</div><div class="line">    $user = JWTAuth::parseToken()-&gt;authenticate();</div><div class="line">    <span class="keyword">if</span> (!$user) {</div><div class="line">      <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;response-&gt;array([</div><div class="line">        <span class="string">&apos;message&apos;</span>     =&gt; trans(<span class="string">&apos;failure.job&apos;</span>),</div><div class="line">        <span class="string">&apos;status_code&apos;</span> =&gt; <span class="number">417</span>,</div><div class="line">      ]);</div><div class="line">    }</div><div class="line"></div><div class="line">    $results = <span class="keyword">$this</span>-&gt;userTechStarsInterface-&gt;getUserTechStarsByUserId($userId);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;response-&gt;collection($results, <span class="keyword">new</span> UserTechStarTransformer());</div><div class="line"></div><div class="line">  }</div><div class="line">}</div></pre></td></tr></table></figure><link href="/css/prism-tomorrow.css" rel="stylesheet">
+        <!-- toc -->
+<ul>
+<li><a href="#quick-start">Quick Start</a><ul>
+<li><a href="#create-a-new-post">Create a new post</a></li>
+<li><a href="#run-server">Run server</a></li>
+<li><a href="#generate-static-files">Generate static files</a></li>
+<li><a href="#deploy-to-remote-sites">Deploy to remote sites</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="quick-start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<a id="more"></a>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span> <span class="keyword">namespace</span> <span class="title">App</span>\<span class="title">Http</span>\<span class="title">V1_0</span>\<span class="title">Controllers</span>;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Repositories</span>\<span class="title">Interfaces</span>\<span class="title">UserTechStarsInterface</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">JWTAuth</span>;</div><div class="line"><span class="keyword">use</span> <span class="title">App</span>\<span class="title">Http</span>\<span class="title">V1_0</span>\<span class="title">Transformers</span>\<span class="title">UserTechStarTransformer</span>;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">UserTechStarsController</span> <span class="keyword">extends</span> <span class="title">ApiController</span></span></div><div class="line">{</div><div class="line">  <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">(UserTechStarsInterface $userTechStarsInterface)</span></span></div><div class="line">  {</div><div class="line">    <span class="keyword">$this</span>-&gt;userTechStarsInterface = $userTechStarsInterface;</div><div class="line">  }</div><div class="line"></div><div class="line">  <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">show</span><span class="params">($userId)</span></span></div><div class="line">  {</div><div class="line">    $user = JWTAuth::parseToken()-&gt;authenticate();</div><div class="line">    <span class="keyword">if</span> (!$user) {</div><div class="line">      <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;response-&gt;array([</div><div class="line">        <span class="string">&apos;message&apos;</span>     =&gt; trans(<span class="string">&apos;failure.job&apos;</span>),</div><div class="line">        <span class="string">&apos;status_code&apos;</span> =&gt; <span class="number">417</span>,</div><div class="line">      ]);</div><div class="line">    }</div><div class="line"></div><div class="line">    $results = <span class="keyword">$this</span>-&gt;userTechStarsInterface-&gt;getUserTechStarsByUserId($userId);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;response-&gt;collection($results, <span class="keyword">new</span> UserTechStarTransformer());</div><div class="line"></div><div class="line">  }</div><div class="line">}</div></pre></td></tr></table></figure>
+<p><img src="/images/rivergod.png" width="50%" height="50%" align="center/"></p>
+<link href="/css/prism-tomorrow.css" rel="stylesheet">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://hexor.github.io/2016/11/26/new-article/" data-id="civz11u0q0001nyfya895oqg8" class="article-share-link">Share</a>
+      <a data-url="http://hexor.github.io/2016/11/26/new-article/" data-id="civz3zlyn0000kxfy45agh0dq" class="article-share-link">Share</a>
       
         <a href="http://hexor.github.io/2016/11/26/new-article/#disqus_thread" class="article-comment-link">留言</a>
       
@@ -103,25 +155,6 @@
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2016/11/26/pic-test/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          pic test
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/11/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
   
 </article>
 
@@ -160,15 +193,7 @@
       <ul>
         
           <li>
-            <a href="/2016/11/26/pic-test/">pic test</a>
-          </li>
-        
-          <li>
             <a href="/2016/11/26/new-article/">Test 1</a>
-          </li>
-        
-          <li>
-            <a href="/2016/11/25/hello-world/">Hello World</a>
           </li>
         
       </ul>
