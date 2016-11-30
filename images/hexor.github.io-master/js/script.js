@@ -1,6 +1,6 @@
 (function($){
   // Search
-  var $searchWrap = $('#search-form-wrap'),
+  var $searchWrap = $(&apos;#search-form-wrap&apos;),
     isSearchAnim = false,
     searchAnimDuration = 200;
 
@@ -11,103 +11,103 @@
   var stopSearchAnim = function(callback){
     setTimeout(function(){
       isSearchAnim = false;
-      callback && callback();
+      callback &amp;&amp; callback();
     }, searchAnimDuration);
   };
 
-  $('#nav-search-btn').on('click', function(){
+  $(&apos;#nav-search-btn&apos;).on(&apos;click&apos;, function(){
     if (isSearchAnim) return;
 
     startSearchAnim();
-    $searchWrap.addClass('on');
+    $searchWrap.addClass(&apos;on&apos;);
     stopSearchAnim(function(){
-      $('.search-form-input').focus();
+      $(&apos;.search-form-input&apos;).focus();
     });
   });
 
-  $('.search-form-input').on('blur', function(){
+  $(&apos;.search-form-input&apos;).on(&apos;blur&apos;, function(){
     startSearchAnim();
-    $searchWrap.removeClass('on');
+    $searchWrap.removeClass(&apos;on&apos;);
     stopSearchAnim();
   });
 
   // Share
-  $('body').on('click', function(){
-    $('.article-share-box.on').removeClass('on');
-  }).on('click', '.article-share-link', function(e){
+  $(&apos;body&apos;).on(&apos;click&apos;, function(){
+    $(&apos;.article-share-box.on&apos;).removeClass(&apos;on&apos;);
+  }).on(&apos;click&apos;, &apos;.article-share-link&apos;, function(e){
     e.stopPropagation();
 
     var $this = $(this),
-      url = $this.attr('data-url'),
+      url = $this.attr(&apos;data-url&apos;),
       encodedUrl = encodeURIComponent(url),
-      id = 'article-share-box-' + $this.attr('data-id'),
+      id = &apos;article-share-box-&apos; + $this.attr(&apos;data-id&apos;),
       offset = $this.offset();
 
-    if ($('#' + id).length){
-      var box = $('#' + id);
+    if ($(&apos;#&apos; + id).length){
+      var box = $(&apos;#&apos; + id);
 
-      if (box.hasClass('on')){
-        box.removeClass('on');
+      if (box.hasClass(&apos;on&apos;)){
+        box.removeClass(&apos;on&apos;);
         return;
       }
     } else {
       var html = [
-        '<div id="' + id + '" class="article-share-box">',
-          '<input class="article-share-input" value="' + url + '">',
-          '<div class="article-share-links">',
-            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-          '</div>',
-        '</div>'
-      ].join('');
+        &apos;<div id="&apos; + id + &apos;" class="article-share-box">&apos;,
+          &apos;<input class="article-share-input" value="&apos; + url + &apos;">&apos;,
+          &apos;<div class="article-share-links">&apos;,
+            &apos;<a href="https://twitter.com/intent/tweet?url=&apos; + encodedUrl + &apos;" class="article-share-twitter" target="_blank" title="Twitter"></a>&apos;,
+            &apos;<a href="https://www.facebook.com/sharer.php?u=&apos; + encodedUrl + &apos;" class="article-share-facebook" target="_blank" title="Facebook"></a>&apos;,
+            &apos;<a href="http://pinterest.com/pin/create/button/?url=&apos; + encodedUrl + &apos;" class="article-share-pinterest" target="_blank" title="Pinterest"></a>&apos;,
+            &apos;<a href="https://plus.google.com/share?url=&apos; + encodedUrl + &apos;" class="article-share-google" target="_blank" title="Google+"></a>&apos;,
+          &apos;</div>&apos;,
+        &apos;</div>&apos;
+      ].join(&apos;&apos;);
 
       var box = $(html);
 
-      $('body').append(box);
+      $(&apos;body&apos;).append(box);
     }
 
-    $('.article-share-box.on').hide();
+    $(&apos;.article-share-box.on&apos;).hide();
 
     box.css({
       top: offset.top + 25,
       left: offset.left
-    }).addClass('on');
-  }).on('click', '.article-share-box', function(e){
+    }).addClass(&apos;on&apos;);
+  }).on(&apos;click&apos;, &apos;.article-share-box&apos;, function(e){
     e.stopPropagation();
-  }).on('click', '.article-share-box-input', function(){
+  }).on(&apos;click&apos;, &apos;.article-share-box-input&apos;, function(){
     $(this).select();
-  }).on('click', '.article-share-box-link', function(e){
+  }).on(&apos;click&apos;, &apos;.article-share-box-link&apos;, function(e){
     e.preventDefault();
     e.stopPropagation();
 
-    window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+    window.open(this.href, &apos;article-share-box-window-&apos; + Date.now(), &apos;width=500,height=450&apos;);
   });
 
   // Caption
-  $('.article-entry').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
+  $(&apos;.article-entry&apos;).each(function(i){
+    $(this).find(&apos;img&apos;).each(function(){
+      if ($(this).parent().hasClass(&apos;fancybox&apos;)) return;
 
       var alt = this.alt;
 
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      if (alt) $(this).after(&apos;<span class="caption">&apos; + alt + &apos;</span>&apos;);
 
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+      $(this).wrap(&apos;<a href="&apos; + this.src + &apos;" title="&apos; + alt + &apos;" class="fancybox"></a>&apos;);
     });
 
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
+    $(this).find(&apos;.fancybox&apos;).each(function(){
+      $(this).attr(&apos;rel&apos;, &apos;article&apos; + i);
     });
   });
 
   if ($.fancybox){
-    $('.fancybox').fancybox();
+    $(&apos;.fancybox&apos;).fancybox();
   }
 
   // Mobile nav
-  var $container = $('#container'),
+  var $container = $(&apos;#container&apos;),
     isMobileNavAnim = false,
     mobileNavAnimDuration = 200;
 
@@ -121,17 +121,17 @@
     }, mobileNavAnimDuration);
   }
 
-  $('#main-nav-toggle').on('click', function(){
+  $(&apos;#main-nav-toggle&apos;).on(&apos;click&apos;, function(){
     if (isMobileNavAnim) return;
 
     startMobileNavAnim();
-    $container.toggleClass('mobile-nav-on');
+    $container.toggleClass(&apos;mobile-nav-on&apos;);
     stopMobileNavAnim();
   });
 
-  $('#wrap').on('click', function(){
-    if (isMobileNavAnim || !$container.hasClass('mobile-nav-on')) return;
+  $(&apos;#wrap&apos;).on(&apos;click&apos;, function(){
+    if (isMobileNavAnim || !$container.hasClass(&apos;mobile-nav-on&apos;)) return;
 
-    $container.removeClass('mobile-nav-on');
+    $container.removeClass(&apos;mobile-nav-on&apos;);
   });
-})(jQuery);
+})(jQuery);<link href="/css/prism-tomorrow.css" rel="stylesheet">

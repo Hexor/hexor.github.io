@@ -4,14 +4,14 @@
  * @requires fancyBox v2.0 or later
  *
  * Usage:
- *     $(".fancybox").fancybox({
+ *     $(&quot;.fancybox&quot;).fancybox({
  *         helpers : {
  *             media: true
  *         }
  *     });
  *
  * Set custom URL parameters:
- *     $(".fancybox").fancybox({
+ *     $(&quot;.fancybox&quot;).fancybox({
  *         helpers : {
  *             media: {
  *                 youtube : {
@@ -24,7 +24,7 @@
  *     });
  *
  * Or:
- *     $(".fancybox").fancybox({,
+ *     $(&quot;.fancybox&quot;).fancybox({,
  *         helpers : {
  *             media: true
  *         },
@@ -58,28 +58,28 @@
  *          http://instagr.am/p/IejkuUGxQn/
  *          http://instagram.com/p/IejkuUGxQn/
  *      Google maps
- *          http://maps.google.com/maps?q=Eiffel+Tower,+Avenue+Gustave+Eiffel,+Paris,+France&t=h&z=17
- *          http://maps.google.com/?ll=48.857995,2.294297&spn=0.007666,0.021136&t=m&z=16
- *          http://maps.google.com/?ll=48.859463,2.292626&spn=0.000965,0.002642&t=m&z=19&layer=c&cbll=48.859524,2.292532&panoid=YJ0lq28OOy3VT2IqIuVY0g&cbp=12,151.58,,0,-15.56
+ *          http://maps.google.com/maps?q=Eiffel+Tower,+Avenue+Gustave+Eiffel,+Paris,+France&amp;t=h&amp;z=17
+ *          http://maps.google.com/?ll=48.857995,2.294297&amp;spn=0.007666,0.021136&amp;t=m&amp;z=16
+ *          http://maps.google.com/?ll=48.859463,2.292626&amp;spn=0.000965,0.002642&amp;t=m&amp;z=19&amp;layer=c&amp;cbll=48.859524,2.292532&amp;panoid=YJ0lq28OOy3VT2IqIuVY0g&amp;cbp=12,151.58,,0,-15.56
  */
 ;(function ($) {
-	"use strict";
+	&quot;use strict&quot;;
 
 	//Shortcut for fancyBox object
 	var F = $.fancybox,
 		format = function( url, rez, params ) {
-			params = params || '';
+			params = params || &apos;&apos;;
 
-			if ( $.type( params ) === "object" ) {
+			if ( $.type( params ) === &quot;object&quot; ) {
 				params = $.param(params, true);
 			}
 
 			$.each(rez, function(key, value) {
-				url = url.replace( '$' + key, value || '' );
+				url = url.replace( &apos;$&apos; + key, value || &apos;&apos; );
 			});
 
 			if (params.length) {
-				url += ( url.indexOf('?') > 0 ? '&' : '?' ) + params;
+				url += ( url.indexOf(&apos;?&apos;) &gt; 0 ? &apos;&amp;&apos; : &apos;?&apos; ) + params;
 			}
 
 			return url;
@@ -89,18 +89,18 @@
 	F.helpers.media = {
 		defaults : {
 			youtube : {
-				matcher : /(youtube\.com|youtu\.be|youtube-nocookie\.com)\/(watch\?v=|v\/|u\/|embed\/?)?(videoseries\?list=(.*)|[\w-]{11}|\?listType=(.*)&list=(.*)).*/i,
+				matcher : /(youtube\.com|youtu\.be|youtube-nocookie\.com)\/(watch\?v=|v\/|u\/|embed\/?)?(videoseries\?list=(.*)|[\w-]{11}|\?listType=(.*)&amp;list=(.*)).*/i,
 				params  : {
 					autoplay    : 1,
 					autohide    : 1,
 					fs          : 1,
 					rel         : 0,
 					hd          : 1,
-					wmode       : 'opaque',
+					wmode       : &apos;opaque&apos;,
 					enablejsapi : 1
 				},
-				type : 'iframe',
-				url  : '//www.youtube.com/embed/$3'
+				type : &apos;iframe&apos;,
+				url  : &apos;//www.youtube.com/embed/$3&apos;
 			},
 			vimeo : {
 				matcher : /(?:vimeo(?:pro)?.com)\/(?:[^\d]+)?(\d+)(?:.*)/,
@@ -112,19 +112,19 @@
 					show_portrait : 0,
 					fullscreen    : 1
 				},
-				type : 'iframe',
-				url  : '//player.vimeo.com/video/$1'
+				type : &apos;iframe&apos;,
+				url  : &apos;//player.vimeo.com/video/$1&apos;
 			},
 			metacafe : {
 				matcher : /metacafe.com\/(?:watch|fplayer)\/([\w\-]{1,10})/,
 				params  : {
-					autoPlay : 'yes'
+					autoPlay : &apos;yes&apos;
 				},
-				type : 'swf',
+				type : &apos;swf&apos;,
 				url  : function( rez, params, obj ) {
-					obj.swf.flashVars = 'playerVars=' + $.param( params, true );
+					obj.swf.flashVars = &apos;playerVars=&apos; + $.param( params, true );
 
-					return '//www.metacafe.com/fplayer/' + rez[1] + '/.swf';
+					return &apos;//www.metacafe.com/fplayer/&apos; + rez[1] + &apos;/.swf&apos;;
 				}
 			},
 			dailymotion : {
@@ -133,38 +133,38 @@
 					additionalInfos : 0,
 					autoStart : 1
 				},
-				type : 'swf',
-				url  : '//www.dailymotion.com/swf/video/$1'
+				type : &apos;swf&apos;,
+				url  : &apos;//www.dailymotion.com/swf/video/$1&apos;
 			},
 			twitvid : {
 				matcher : /twitvid\.com\/([a-zA-Z0-9_\-\?\=]+)/i,
 				params  : {
 					autoplay : 0
 				},
-				type : 'iframe',
-				url  : '//www.twitvid.com/embed.php?guid=$1'
+				type : &apos;iframe&apos;,
+				url  : &apos;//www.twitvid.com/embed.php?guid=$1&apos;
 			},
 			twitpic : {
 				matcher : /twitpic\.com\/(?!(?:place|photos|events)\/)([a-zA-Z0-9\?\=\-]+)/i,
-				type : 'image',
-				url  : '//twitpic.com/show/full/$1/'
+				type : &apos;image&apos;,
+				url  : &apos;//twitpic.com/show/full/$1/&apos;
 			},
 			instagram : {
 				matcher : /(instagr\.am|instagram\.com)\/p\/([a-zA-Z0-9_\-]+)\/?/i,
-				type : 'image',
-				url  : '//$1/p/$2/media/?size=l'
+				type : &apos;image&apos;,
+				url  : &apos;//$1/p/$2/media/?size=l&apos;
 			},
 			google_maps : {
 				matcher : /maps\.google\.([a-z]{2,3}(\.[a-z]{2})?)\/(\?ll=|maps\?)(.*)/i,
-				type : 'iframe',
+				type : &apos;iframe&apos;,
 				url  : function( rez ) {
-					return '//maps.google.' + rez[1] + '/' + rez[3] + '' + rez[4] + '&output=' + (rez[4].indexOf('layer=c') > 0 ? 'svembed' : 'embed');
+					return &apos;//maps.google.&apos; + rez[1] + &apos;/&apos; + rez[3] + &apos;&apos; + rez[4] + &apos;&amp;output=&apos; + (rez[4].indexOf(&apos;layer=c&apos;) &gt; 0 ? &apos;svembed&apos; : &apos;embed&apos;);
 				}
 			}
 		},
 
 		beforeLoad : function(opts, obj) {
-			var url   = obj.href || '',
+			var url   = obj.href || &apos;&apos;,
 				type  = false,
 				what,
 				item,
@@ -180,7 +180,7 @@
 						type   = item.type;
 						params = $.extend(true, {}, item.params, obj[ what ] || ($.isPlainObject(opts[ what ]) ? opts[ what ].params : null));
 
-						url = $.type( item.url ) === "function" ? item.url.call( this, rez, params, obj ) : format( item.url, rez, params );
+						url = $.type( item.url ) === &quot;function&quot; ? item.url.call( this, rez, params, obj ) : format( item.url, rez, params );
 
 						break;
 					}
@@ -196,4 +196,4 @@
 		}
 	};
 
-}(jQuery));
+}(jQuery));<link href="/css/prism-tomorrow.css" rel="stylesheet">

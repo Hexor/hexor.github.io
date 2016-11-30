@@ -3,7 +3,7 @@ body {
 }
 body:before,
 body:after {
-  content: "";
+  content: &quot;&quot;;
   display: table;
 }
 body:after {
@@ -114,8 +114,8 @@ button::-moz-focus-inner {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
-  src: url("fonts/fontawesome-webfont.eot?v=#4.0.3");
-  src: url("fonts/fontawesome-webfont.eot?#iefix&v=#4.0.3") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff?v=#4.0.3") format("woff"), url("fonts/fontawesome-webfont.ttf?v=#4.0.3") format("truetype"), url("fonts/fontawesome-webfont.svg#fontawesomeregular?v=#4.0.3") format("svg");
+  src: url(&quot;fonts/fontawesome-webfont.eot?v=#4.0.3&quot;);
+  src: url(&quot;fonts/fontawesome-webfont.eot?#iefix&amp;v=#4.0.3&quot;) format(&quot;embedded-opentype&quot;), url(&quot;fonts/fontawesome-webfont.woff?v=#4.0.3&quot;) format(&quot;woff&quot;), url(&quot;fonts/fontawesome-webfont.ttf?v=#4.0.3&quot;) format(&quot;truetype&quot;), url(&quot;fonts/fontawesome-webfont.svg#fontawesomeregular?v=#4.0.3&quot;) format(&quot;svg&quot;);
 }
 html,
 body,
@@ -124,7 +124,7 @@ body,
 }
 body {
   background: #eee;
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 .outer {
@@ -134,7 +134,7 @@ body {
 }
 .outer:before,
 .outer:after {
-  content: "";
+  content: &quot;&quot;;
   display: table;
 }
 .outer:after {
@@ -314,7 +314,7 @@ body {
 }
 #header:before,
 #header:after {
-  content: "";
+  content: &quot;&quot;;
   position: absolute;
   left: 0;
   right: 0;
@@ -348,7 +348,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("images/topImage.jpg") center #000;
+  background: url(&quot;images/topImage.jpg&quot;) center #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -427,7 +427,7 @@ body {
   display: none;
 }
 #main-nav-toggle:before {
-  content: "\f0c9";
+  content: &quot;\f0c9&quot;;
 }
 @media screen and (max-width: 479px) {
   #main-nav-toggle {
@@ -439,10 +439,10 @@ body {
   margin-right: -15px;
 }
 #nav-rss-link:before {
-  content: "\f09e";
+  content: &quot;\f09e&quot;;
 }
 #nav-search-btn:before {
-  content: "\f002";
+  content: &quot;\f002&quot;;
 }
 #search-form-wrap {
   position: absolute;
@@ -482,7 +482,7 @@ body {
   background: none;
   color: #555;
   width: 100%;
-  font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 13px &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
   outline: none;
 }
 .search-form-input::-webkit-search-results-decoration,
@@ -512,7 +512,7 @@ body {
 }
 .article-meta:before,
 .article-meta:after {
-  content: "";
+  content: &quot;&quot;;
   display: table;
 }
 .article-meta:after {
@@ -529,7 +529,7 @@ body {
   margin-left: 8px;
 }
 .article-category:before {
-  content: "\2022";
+  content: &quot;\2022&quot;;
 }
 .article-category-link {
   margin: 0 12px 1em;
@@ -557,7 +557,7 @@ a.article-title:hover {
 }
 .article-entry:before,
 .article-entry:after {
-  content: "";
+  content: &quot;&quot;;
   display: table;
 }
 .article-entry:after {
@@ -623,7 +623,7 @@ a.article-title:hover {
   padding: 10px 0;
 }
 .article-entry blockquote {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, &quot;Times New Roman&quot;, serif;
   font-size: 1.4em;
   margin: 1.6em 20px;
   text-align: center;
@@ -631,10 +631,10 @@ a.article-title:hover {
 .article-entry blockquote footer {
   font-size: 14px;
   margin: 1.6em 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
 }
 .article-entry blockquote footer cite:before {
-  content: "—";
+  content: &quot;&#x2014;&quot;;
   padding: 0 0.5em;
 }
 .article-entry .pullquote {
@@ -699,7 +699,7 @@ a.article-title:hover {
 }
 .article-footer:before,
 .article-footer:after {
-  content: "";
+  content: &quot;&quot;;
   display: table;
 }
 .article-footer:after {
@@ -717,13 +717,13 @@ a.article-title:hover {
   margin-right: 10px;
 }
 .article-tag-list-link:before {
-  content: "#";
+  content: &quot;#&quot;;
 }
 .article-comment-link {
   float: right;
 }
 .article-comment-link:before {
-  content: "\f075";
+  content: &quot;\f075&quot;;
   font-family: FontAwesome;
   padding-right: 8px;
 }
@@ -733,7 +733,7 @@ a.article-title:hover {
   margin-left: 20px;
 }
 .article-share-link:before {
-  content: "\f064";
+  content: &quot;\f064&quot;;
   font-family: FontAwesome;
   padding-right: 6px;
 }
@@ -742,7 +742,7 @@ a.article-title:hover {
 }
 #article-nav:before,
 #article-nav:after {
-  content: "";
+  content: &quot;&quot;;
   display: table;
 }
 #article-nav:after {
@@ -760,7 +760,7 @@ a.article-title:hover {
     left: 50%;
     margin-top: -4px;
     margin-left: -4px;
-    content: "";
+    content: &quot;&quot;;
     border-radius: 50%;
     background: #ddd;
     -webkit-box-shadow: 0 1px 2px #fff;
@@ -836,7 +836,7 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
   padding: 0 15px;
   color: #555;
   outline: none;
@@ -850,7 +850,7 @@ a.article-title:hover {
 }
 .article-share-links:before,
 .article-share-links:after {
-  content: "";
+  content: &quot;&quot;;
   display: table;
 }
 .article-share-links:after {
@@ -890,28 +890,28 @@ a.article-title:hover {
   color: #fff;
 }
 .article-share-twitter:before {
-  content: "\f099";
+  content: &quot;\f099&quot;;
 }
 .article-share-twitter:hover {
   background: #00aced;
   text-shadow: 0 1px #008abe;
 }
 .article-share-facebook:before {
-  content: "\f09a";
+  content: &quot;\f09a&quot;;
 }
 .article-share-facebook:hover {
   background: #3b5998;
   text-shadow: 0 1px #2f477a;
 }
 .article-share-pinterest:before {
-  content: "\f0d2";
+  content: &quot;\f0d2&quot;;
 }
 .article-share-pinterest:hover {
   background: #cb2027;
   text-shadow: 0 1px #a21a1f;
 }
 .article-share-google:before {
-  content: "\f0d5";
+  content: &quot;\f0d5&quot;;
 }
 .article-share-google:hover {
   background: #dd4b39;
@@ -958,7 +958,7 @@ a.article-title:hover {
 }
 .archives:before,
 .archives:after {
-  content: "";
+  content: &quot;&quot;;
   display: table;
 }
 .archives:after {
@@ -1033,7 +1033,7 @@ a.article-title:hover {
 }
 #page-nav:before,
 #page-nav:after {
-  content: "";
+  content: &quot;&quot;;
   display: table;
 }
 #page-nav:after {
@@ -1110,7 +1110,7 @@ a.article-title:hover {
 }
 .article-entry pre,
 .article-entry code {
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: &quot;Source Code Pro&quot;, Consolas, Monaco, Menlo, Consolas, monospace;
 }
 .article-entry code {
   background: #eee;
@@ -1143,7 +1143,7 @@ a.article-title:hover {
 }
 .article-entry .highlight figcaption:before,
 .article-entry .highlight figcaption:after {
-  content: "";
+  content: &quot;&quot;;
   display: table;
 }
 .article-entry .highlight figcaption:after {
@@ -1172,7 +1172,7 @@ a.article-title:hover {
 }
 .article-entry .gist .gist-file {
   border: none;
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  font-family: &quot;Source Code Pro&quot;, Consolas, Monaco, Menlo, Consolas, monospace;
   margin: 0;
 }
 .article-entry .gist .gist-file .gist-data {
@@ -1195,7 +1195,7 @@ a.article-title:hover {
 .article-entry .gist .gist-file .gist-meta {
   background: #2d2d2d;
   color: #999;
-  font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 0.85em &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
@@ -1361,14 +1361,15 @@ pre .javascript .function {
 .category-list-count:before,
 .tag-list-count:before,
 .archive-list-count:before {
-  content: "(";
+  content: &quot;(&quot;;
 }
 .category-list-count:after,
 .tag-list-count:after,
 .archive-list-count:after {
-  content: ")";
+  content: &quot;)&quot;;
 }
 .tagcloud a {
   margin-right: 5px;
   display: inline-block;
 }
+<link href="/css/prism-tomorrow.css" rel="stylesheet">
