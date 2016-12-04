@@ -3,17 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>河童的河</title>
+  <title>从 1 行代码开始，带你系统性的理解   Laravel  Service Container 系统的核心概念 | 河童的河</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术 &amp; 生活">
-<meta property="og:type" content="website">
-<meta property="og:title" content="河童的河">
-<meta property="og:url" content="http://hexor.github.io/index.html">
+  <meta name="description" content="&amp;#x6982;&amp;#x89C8;
+&amp;#x672C;&amp;#x6587;&amp;#x7684;&amp;#x76EE;&amp;#x7684;
+&amp;#x9605;&amp;#x8BFB;&amp;#x4E4B;&amp;#x524D;
+&amp;#x9605;&amp;#x8BFB;&amp;#x4E4B;&amp;#x540E;
+
+
+&amp;#x6B63;&amp;#x6587;
+&amp;#x4E00;&amp;#x4E2A;&amp;#x57FA;&amp;#x7840;&amp;#x7248;&amp;#x7684; IOC C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从 1 行代码开始，带你系统性的理解   Laravel  Service Container 系统的核心概念">
+<meta property="og:url" content="http://hexor.github.io/2016/12/04/从-1-行代码开始，带你系统性的理解-Laravel-Service-Container-系统的核心概念/index.html">
 <meta property="og:site_name" content="河童的河">
-<meta property="og:description" content="技术 &amp; 生活">
+<meta property="og:description" content="&amp;#x6982;&amp;#x89C8;
+&amp;#x672C;&amp;#x6587;&amp;#x7684;&amp;#x76EE;&amp;#x7684;
+&amp;#x9605;&amp;#x8BFB;&amp;#x4E4B;&amp;#x524D;
+&amp;#x9605;&amp;#x8BFB;&amp;#x4E4B;&amp;#x540E;
+
+
+&amp;#x6B63;&amp;#x6587;
+&amp;#x4E00;&amp;#x4E2A;&amp;#x57FA;&amp;#x7840;&amp;#x7248;&amp;#x7684; IOC C">
+<meta property="og:updated_time" content="2016-12-04T15:55:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="河童的河">
-<meta name="twitter:description" content="技术 &amp; 生活">
+<meta name="twitter:title" content="从 1 行代码开始，带你系统性的理解   Laravel  Service Container 系统的核心概念">
+<meta name="twitter:description" content="&amp;#x6982;&amp;#x89C8;
+&amp;#x672C;&amp;#x6587;&amp;#x7684;&amp;#x76EE;&amp;#x7684;
+&amp;#x9605;&amp;#x8BFB;&amp;#x4E4B;&amp;#x524D;
+&amp;#x9605;&amp;#x8BFB;&amp;#x4E4B;&amp;#x540E;
+
+
+&amp;#x6B63;&amp;#x6587;
+&amp;#x4E00;&amp;#x4E2A;&amp;#x57FA;&amp;#x7840;&amp;#x7248;&amp;#x7684; IOC C">
 <meta name="twitter:creator" content="@/Hex_iN_gaMe">
   
     <link rel="alternate" href="/atom.xml" title="河童的河" type="application/atom+xml">
@@ -70,9 +92,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <section id="main"><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <article id="post-从-1-行代码开始，带你系统性的理解-Laravel-Service-Container-系统的核心概念" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -87,8 +107,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/04/从-1-行代码开始，带你系统性的理解-Laravel-Service-Container-系统的核心概念/">从 1 行代码开始，带你系统性的理解   Laravel  Service Container 系统的核心概念</a>
+    <h1 class="article-title" itemprop="name">
+      从 1 行代码开始，带你系统性的理解   Laravel  Service Container 系统的核心概念
     </h1>
   
 
@@ -284,261 +304,35 @@
       
       
       
-
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<article id="post-Laravel-请求的生命周期" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/30/Laravel-请求的生命周期/" class="article-date">
-  <time datetime="2016-11-30T13:25:09.000Z" itemprop="datePublished">2016-11-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-<div class="article-gallery">
-  <div class="article-gallery-photos">
-    
-      <a class="article-gallery-img fancybox" href="/images/laravel_lifecycle_overview.png" rel="gallery_ciwasfhnp000220fyzt80jg2u">
-        <img src="/images/laravel_lifecycle_overview.png" itemprop="image">
-      </a>
-    
-  </div>
-</div>
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/30/Laravel-请求的生命周期/">Laravel 请求的生命周期</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>当你使用一个工具的时候, 如果你对这个工具的内部原理和构造有所了解, 那么在使用这个工具的时候, 就会更加的有信心, 工具用起来也会更加的得心应手. </p>
-        
-          <p class="article-more-link">
-            <a href="/2016/11/30/Laravel-请求的生命周期/#more">Read More</a>
-          </p>
-        
-      
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://hexor.github.io/2016/11/30/Laravel-请求的生命周期/" data-id="ciwasfhnp000220fyzt80jg2u" class="article-share-link">Share</a>
-      
-        <a href="http://hexor.github.io/2016/11/30/Laravel-请求的生命周期/#disqus_thread" class="article-comment-link">留言</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Laravel/">Laravel</a></li></ul>
-
-      
+        Views <span id="busuanzi_value_page_pv"></span>
       
 
 
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<article id="post-Laravel-入门阶段学习日记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/29/Laravel-入门阶段学习日记/" class="article-date">
-  <time datetime="2016-11-29T13:33:50.000Z" itemprop="datePublished">2016-11-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/29/Laravel-入门阶段学习日记/">Laravel 入门阶段学习日记</a>
-    </h1>
+    <a href="/2016/11/30/Laravel-请求的生命周期/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Laravel 请求的生命周期</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>记录我自学 Laravel 的过程.<br>
-        
-          <p class="article-more-link">
-            <a href="/2016/11/29/Laravel-入门阶段学习日记/#more">Read More</a>
-          </p>
-        
-      
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://hexor.github.io/2016/11/29/Laravel-入门阶段学习日记/" data-id="ciwasfho0000520fy4ycme2p6" class="article-share-link">Share</a>
-      
-        <a href="http://hexor.github.io/2016/11/29/Laravel-入门阶段学习日记/#disqus_thread" class="article-comment-link">留言</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Laravel/">Laravel</a></li></ul>
-
-      
-      
-
-
-    </footer>
-  </div>
   
 </article>
 
 
-  
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<article id="post-我的-Laravel-学习过程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/29/我的-Laravel-学习过程/" class="article-date">
-  <time datetime="2016-11-29T12:56:59.000Z" itemprop="datePublished">2016-11-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
 
-  </div>
-  <div class="article-inner">
-    
-<div class="article-gallery">
-  <div class="article-gallery-photos">
-    
-      <a class="article-gallery-img fancybox" href="/images/laravel-logo1.jpg" rel="gallery_ciwasfho4000620fyjwg9jjlp">
-        <img src="/images/laravel-logo1.jpg" itemprop="image">
-      </a>
-    
-  </div>
-</div>
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/29/我的-Laravel-学习过程/">我的 Laravel 学习过程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本文将介绍我学习 Laravel 时的学习计划和方法</p>
-        
-          <p class="article-more-link">
-            <a href="/2016/11/29/我的-Laravel-学习过程/#more">Read More</a>
-          </p>
-        
-      
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://hexor.github.io/2016/11/29/我的-Laravel-学习过程/" data-id="ciwasfho4000620fyjwg9jjlp" class="article-share-link">Share</a>
-      
-        <a href="http://hexor.github.io/2016/11/29/我的-Laravel-学习过程/#disqus_thread" class="article-comment-link">留言</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Laravel/">Laravel</a></li></ul>
-
-      
-      
-
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-<article id="post-Hexo-使用手册" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/11/27/Hexo-使用手册/" class="article-date">
-  <time datetime="2016-11-27T00:26:21.000Z" itemprop="datePublished">2016-11-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/技术/">技术</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/27/Hexo-使用手册/">Hexo 常用使用手册</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/images/rivergod.png" width=50% height=50% align=center/><br>本文将介绍我使用 Hexo 时的一些常用操作</p>
-        
-          <p class="article-more-link">
-            <a href="/2016/11/27/Hexo-使用手册/#more">Read More</a>
-          </p>
-        
-      
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://hexor.github.io/2016/11/27/Hexo-使用手册/" data-id="ciwasfhne000020fya4vyhnic" class="article-share-link">Share</a>
-      
-        <a href="http://hexor.github.io/2016/11/27/Hexo-使用手册/#disqus_thread" class="article-comment-link">留言</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-
-      
-      
-
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
+</section>
 </section>
         
           <aside id="sidebar">
@@ -626,11 +420,13 @@
 <script>
   var disqus_shortname = 'hexor-1';
   
+  var disqus_url = 'http://hexor.github.io/2016/12/04/从-1-行代码开始，带你系统性的理解-Laravel-Service-Container-系统的核心概念/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
