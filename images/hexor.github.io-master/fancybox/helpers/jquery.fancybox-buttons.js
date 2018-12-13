@@ -120,4 +120,4 @@
 	};
 
 }(jQuery));
-<link href="/homepage/css/prism-tomorrow.css" rel="stylesheet">
+<link href="/blog/css/prism-tomorrow.css" rel="stylesheet">

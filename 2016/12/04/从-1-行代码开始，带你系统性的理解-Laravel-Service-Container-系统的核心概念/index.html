@@ -93,7 +93,7 @@
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/blog/images/Laravel-core-concepts.png" rel="gallery_cjpmbq5rp000bbesvi0qxiy9h">
+      <a class="article-gallery-img fancybox" href="/blog/images/Laravel-core-concepts.png" rel="gallery_cjpmdkuwc000ssxsv82jue7ef">
         <img src="/blog/images/Laravel-core-concepts.png" itemprop="image">
       </a>
     
@@ -160,7 +160,7 @@
 <li>IOC 为系统的架构提供了哪些好处</li>
 </ul>
 <p>关于 IOC 的问题你可以从<a href="https://laravel-china.org/topics/789" target="_blank" rel="noopener">这篇文章</a>中得到很好的答案。</p>
-<p>当然，你最好也能从<a href="https://hexor.github.io/2016/11/30/Laravel-%E8%AF%B7%E6%B1%82%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">这里</a>了解一下 Laravel 请求的生命周期。</p>
+<p>当然，你最好也能从<a href="https://hexor.github.io/2016/11/30/Laravel-%E8%AF%B7%E6%B1%82%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" target="_blank" rel="noopener">这里</a>了解一下 Laravel 请求的生命周期。</p>
 <h3><span id="阅读之后">阅读之后</span></h3><p>希望大家能通过阅读本篇文章对上述4个核心概念有更好的理解，至少。。别人问你你能答出来这4点都是干什么的</p>
 <p><br><br><br></p>
 <h2><span id="正文">正文</span></h2><p><br></p>
@@ -189,7 +189,7 @@
 <p>大多数情况下，我们使用第一种方式。为什么呢，我们先从第二种开始说起。</p>
 <h4><span id="如何不通过-service-provider-直接使用-ioc-container">如何不通过 Service Provider 直接使用 IOC Container？</span></h4><p>Laravel 有一个核心类，叫做 Application，这个继承了 Container，所以很显然，这个类是一个 IOC Container</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 该类的命名空间</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Illuminate</span>\<span class="title">Foundation</span>; </span><br><span class="line"></span><br><span class="line"><span class="comment">// 该类的声明</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Application</span> <span class="keyword">extends</span> <span class="title">Container</span> <span class="keyword">implements</span> <span class="title">ApplicationContract</span>, <span class="title">HttpKernelInterface</span></span></span><br></pre></td></tr></table></figure>
-<p>在  Laravel 程序启动的时, 在 bootstrap/app.php  里面实例化了这个类，并把这个类的实例交给了 $app 。如果你了解  <a href="https://hexor.github.io/2016/11/30/Laravel-%E8%AF%B7%E6%B1%82%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">Laravel  请求的生命周期</a>，那你就会对这里的程序流程更清楚一些，不过不了解也没有大碍。</p>
+<p>在  Laravel 程序启动的时, 在 bootstrap/app.php  里面实例化了这个类，并把这个类的实例交给了 $app 。如果你了解  <a href="https://hexor.github.io/2016/11/30/Laravel-%E8%AF%B7%E6%B1%82%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" target="_blank" rel="noopener">Laravel  请求的生命周期</a>，那你就会对这里的程序流程更清楚一些，不过不了解也没有大碍。</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在 bootstrap/app.php 中实例化了该类</span></span><br><span class="line">$app = <span class="keyword">new</span> Illuminate\Foundation\Application(</span><br><span class="line">    realpath(<span class="keyword">__DIR__</span>.<span class="string">'/../'</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <p>比如我们现在需要不通过 Service Provider 直接使用 IOC Container ，就是要使用上面的这个 IOC Container， 也就是 $app 。</p>
 <p>很简单， 我们要做的第一件事就是 <code>bind</code>， 第二件事就是 <code>make</code></p>
@@ -290,12 +290,12 @@
 <p><a href="http://blog.11010.net/laravel-help-understand" target="_blank" rel="noopener">Laravel 核心要点的个人理解帮助</a></p>
 <p><a href="https://vimeo.com/88888213" target="_blank" rel="noopener">vimeo 上的视频教程：Laravel Architecture - Part 1: The IoC Container</a></p>
 <p><a href="https://laravel.com/docs/5.3" target="_blank" rel="noopener"> Laravel  官方文档 </a></p>
-<link href="/homepage/css/prism-tomorrow.css" rel="stylesheet">
+<link href="/blog/css/prism-tomorrow.css" rel="stylesheet">
       
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://bloghex.webdev3.ouj.com/blog/2016/12/04/从-1-行代码开始，带你系统性的理解-Laravel-Service-Container-系统的核心概念/" data-id="cjpmbq5rp000bbesvi0qxiy9h" class="article-share-link">Share</a>
+      <a data-url="http://bloghex.webdev3.ouj.com/blog/2016/12/04/从-1-行代码开始，带你系统性的理解-Laravel-Service-Container-系统的核心概念/" data-id="cjpmdkuwc000ssxsv82jue7ef" class="article-share-link">Share</a>
       
         <a href="http://bloghex.webdev3.ouj.com/blog/2016/12/04/从-1-行代码开始，带你系统性的理解-Laravel-Service-Container-系统的核心概念/#disqus_thread" class="article-comment-link">留言</a>
       

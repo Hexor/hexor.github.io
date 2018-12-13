@@ -162,4 +162,4 @@
 		}
 	}
 
-}(jQuery));<link href="/homepage/css/prism-tomorrow.css" rel="stylesheet">
+}(jQuery));<link href="/blog/css/prism-tomorrow.css" rel="stylesheet">
