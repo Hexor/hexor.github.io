@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <title>Livereload 工具自动刷新前端页面 | 河童的河</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在开发中，经常遇到这种情景：修改项目文件后，要去浏览器中刷新一下页面，检查最新的修改结果。这里介绍一个小工具，他可以在你修改特定的代码之后，自动为你刷新浏览器开发页面。">
+<meta name="keywords" content="Laravel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Livereload 工具自动刷新前端页面">
 <meta property="og:url" content="http://hexor.github.io/2016/12/16/Livereload-工具自动刷新前端页面/index.html">
 <meta property="og:site_name" content="河童的河">
 <meta property="og:description" content="在开发中，经常遇到这种情景：修改项目文件后，要去浏览器中刷新一下页面，检查最新的修改结果。这里介绍一个小工具，他可以在你修改特定的代码之后，自动为你刷新浏览器开发页面。">
-<meta property="og:updated_time" content="2016-12-16T00:21:19.000Z">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-13T07:21:43.153Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Livereload 工具自动刷新前端页面">
 <meta name="twitter:description" content="在开发中，经常遇到这种情景：修改项目文件后，要去浏览器中刷新一下页面，检查最新的修改结果。这里介绍一个小工具，他可以在你修改特定的代码之后，自动为你刷新浏览器开发页面。">
-<meta name="twitter:creator" content="@/Hex_iN_gaMe">
+<meta name="twitter:creator" content="@&#x2F;Hex_iN_gaMe">
   
     <link rel="alternate" href="/atom.xml" title="河童的河" type="application/atom+xml">
   
@@ -29,7 +31,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container">
     <div id="wrap">
@@ -65,7 +67,7 @@
 
 
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://hexor.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://hexor.github.io"></form>
       </div>
     </div>
   </div>
@@ -73,7 +75,7 @@
       <div class="outer">
         <section id="main"><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<article id="post-Livereload-工具自动刷新前端页面" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-Livereload-工具自动刷新前端页面" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/12/16/Livereload-工具自动刷新前端页面/" class="article-date">
   <time datetime="2016-12-16T00:20:01.000Z" itemprop="datePublished">2016-12-16</time>
@@ -99,37 +101,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x7ECF;&#x5E38;&#x9047;&#x5230;&#x8FD9;&#x79CD;&#x60C5;&#x666F;&#xFF1A;&#x4FEE;&#x6539;&#x9879;&#x76EE;&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x8981;&#x53BB;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x5237;&#x65B0;&#x4E00;&#x4E0B;&#x9875;&#x9762;&#xFF0C;&#x68C0;&#x67E5;&#x6700;&#x65B0;&#x7684;&#x4FEE;&#x6539;&#x7ED3;&#x679C;&#x3002;&#x8FD9;&#x91CC;&#x4ECB;&#x7ECD;&#x4E00;&#x4E2A;&#x5C0F;&#x5DE5;&#x5177;&#xFF0C;&#x4ED6;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x4FEE;&#x6539;&#x7279;&#x5B9A;&#x7684;&#x4EE3;&#x7801;&#x4E4B;&#x540E;&#xFF0C;&#x81EA;&#x52A8;&#x4E3A;&#x4F60;&#x5237;&#x65B0;&#x6D4F;&#x89C8;&#x5668;&#x5F00;&#x53D1;&#x9875;&#x9762;&#x3002;</p>
+        <p>在开发中，经常遇到这种情景：修改项目文件后，要去浏览器中刷新一下页面，检查最新的修改结果。这里介绍一个小工具，他可以在你修改特定的代码之后，自动为你刷新浏览器开发页面。</p>
 <a id="more"></a>
 <!-- toc -->
 <ul>
-<li><a href="#&#x4FEE;&#x6539;-gulpfile">&#x4FEE;&#x6539; gulpfile</a></li>
-<li><a href="#&#x5B89;&#x88C5;-gulp-livereload">&#x5B89;&#x88C5; gulp-livereload</a></li>
-<li><a href="#&#x8FD0;&#x884C;-gulp">&#x8FD0;&#x884C; gulp</a></li>
-<li><a href="#&#x5B89;&#x88C5;-chrome-&#x63D2;&#x4EF6;">&#x5B89;&#x88C5; Chrome &#x63D2;&#x4EF6;</a></li>
-<li><a href="#&#x4F7F;&#x7528;&#x65B9;&#x6CD5;">&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</a></li>
+<li><a href="#修改-gulpfile">修改 gulpfile</a></li>
+<li><a href="#安装-gulp-livereload">安装 gulp-livereload</a></li>
+<li><a href="#运行-gulp">运行 gulp</a></li>
+<li><a href="#安装-chrome-插件">安装 Chrome 插件</a></li>
+<li><a href="#使用方法">使用方法</a></li>
 </ul>
 <!-- tocstop -->
-<p>&#x672C;&#x6559;&#x7A0B;&#x4F7F;&#x7528;&#x7684;&#x7248;&#x672C;&#x4E3A;  Laravel 5.1&#xFF0C;&#x5176;&#x4ED6;  Laravel 5.* &#x7248;&#x672C;&#x5E94;&#x8BE5;&#x4E5F;&#x9002;&#x7528;&#x3002;<br>Windows &#x73AF;&#x5883;&#x4E0B;&#x6CA1;&#x6709;&#x8FDB;&#x884C;&#x8FC7;&#x914D;&#x7F6E;&#xFF0C;&#x4E0D;&#x4FDD;&#x8BC1;&#x6210;&#x529F;&#x3002;</p>
-<h2 id="&#x4FEE;&#x6539;-gulpfile"><a href="#&#x4FEE;&#x6539;-gulpfile" class="headerlink" title="&#x4FEE;&#x6539; gulpfile"></a>&#x4FEE;&#x6539; gulpfile</h2><p>&#x5728;  Laravel  &#x9879;&#x76EE;&#x6587;&#x4EF6;&#x4E2D;&#x627E;&#x5230; gulpfile.js&#xFF0C;&#x5728;&#x6587;&#x4EF6;&#x672B;&#x5C3E;&#x52A0;&#x5165;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF0C;&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x76D1;&#x542C;&#x7684;&#x662F; *.blade.php &#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x52A8;&#x4F5C;&#xFF0C;&#x5982;&#x9700;&#x76D1;&#x542C;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF0C;&#x4F5C;&#x51FA;&#x7C7B;&#x4F3C;&#x7684;&#x4FEE;&#x6539;&#x5373;&#x53EF;&#x3002;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">var gulp = require(&apos;gulp&apos;);</div><div class="line">var livereload = require(&apos;gulp-livereload&apos;);</div><div class="line"></div><div class="line">/**</div><div class="line"> * task - &apos;default&apos;</div><div class="line"> * executes &apos;live-monitor&apos;</div><div class="line"> */</div><div class="line">gulp.task(&apos;default&apos;, [&apos;live-monitor&apos;]);</div><div class="line"></div><div class="line">/**</div><div class="line"> * task - &apos;laravel-views&apos;</div><div class="line"> * monitor laravel views</div><div class="line"> */</div><div class="line">gulp.task(&apos;laravel-views&apos;, function() {</div><div class="line">    gulp.src(&apos;resources/views/**/*.blade.php&apos;)</div><div class="line">        .pipe(livereload());</div><div class="line">});</div><div class="line"></div><div class="line">/**</div><div class="line"> * task - &apos;live-monitor&apos;</div><div class="line"> * monitors everything</div><div class="line"> */</div><div class="line">gulp.task(&apos;live-monitor&apos;, function() {</div><div class="line">    livereload.listen();</div><div class="line">    gulp.watch(&apos;resources/views/**/*.blade.php&apos;, [&apos;laravel-views&apos;]);</div><div class="line">});</div></pre></td></tr></table></figure>
-<h2 id="&#x5B89;&#x88C5;-gulp-livereload"><a href="#&#x5B89;&#x88C5;-gulp-livereload" class="headerlink" title="&#x5B89;&#x88C5; gulp-livereload"></a>&#x5B89;&#x88C5; gulp-livereload</h2><p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x9879;&#x76EE;&#x7684;&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x8FD0;&#x884C;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
-<p>&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x8BD5;&#x7740;&#x8FD0;&#x884C; gulp </p>
-<p>&#x53D1;&#x73B0;&#x4F1A;&#x62A5;&#x9519;<br>Error: Cannot find module &#x2018;gulp-livereload&#x2019; </p>
-<p>&#x6B64;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x4E0B;&#x9762;&#x4E00;&#x884C;&#x5B89;&#x88C5; livereload&#xFF0C;&#x8FD0;&#x884C;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev gulp-livereload</div></pre></td></tr></table></figure>
-<h2 id="&#x8FD0;&#x884C;-gulp"><a href="#&#x8FD0;&#x884C;-gulp" class="headerlink" title="&#x8FD0;&#x884C; gulp"></a>&#x8FD0;&#x884C; gulp</h2><p>&#x76F4;&#x63A5;&#x5728;&#x9879;&#x76EE;&#x8DEF;&#x5F84;&#x4E0B;&#x8FD0;&#x884C; <code>gulp</code> &#x547D;&#x4EE4;&#x5373;&#x53EF;&#xFF0C;&#x8FD0;&#x884C;&#x6210;&#x529F;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x6709;&#x7C7B;&#x4F3C;&#x4E0B;&#x9762;&#x4E00;&#x6837;&#x7684;&#x6253;&#x5370;&#x663E;&#x793A;&#x51FA;&#x6765;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Using gulpfile ~/Workspace/PHP/myTodoPractice/gulpfile.js</div><div class="line">Starting &apos;live-monitor&apos;...</div><div class="line">Finished &apos;live-monitor&apos; after 24 ms</div><div class="line">Starting &apos;default&apos;...</div><div class="line">Finished &apos;default&apos; after 13 &#x3BC;s</div></pre></td></tr></table></figure>
-<h2 id="&#x5B89;&#x88C5;-chrome-&#x63D2;&#x4EF6;"><a href="#&#x5B89;&#x88C5;-Chrome-&#x63D2;&#x4EF6;" class="headerlink" title="&#x5B89;&#x88C5; Chrome &#x63D2;&#x4EF6;"></a>&#x5B89;&#x88C5; Chrome &#x63D2;&#x4EF6;</h2><p>&#x63D2;&#x4EF6;&#x5730;&#x5740;&#xFF1A;<a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei" target="_blank" rel="external">Chrome &#x63D2;&#x4EF6;&#x5546;&#x5E97;</a></p>
-<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x5728; Chrome &#x4E2D;&#x6253;&#x5F00;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x81EA;&#x52A8;&#x5237;&#x65B0;&#x7684;&#x7F51;&#x9875;&#xFF08;&#x6BD4;&#x5982;&#x8BF4; localhost &#x6216;&#x8005; homestead.app&#xFF09;&#xFF0C;&#x5DE6;&#x952E;&#x5355;&#x51FB;&#x63D2;&#x4EF6;&#x56FE;&#x6807;&#x3002;<br>&#x6B64;&#x65F6;&#xFF0C;&#x63D2;&#x4EF6;&#x56FE;&#x6807;&#x4E2D;&#x5FC3;&#x7684;&#x5706;&#x5708;&#x7B26;&#x53F7;&#x4F1A;&#x4ECE;&#x7A7A;&#x5FC3;&#x53D8;&#x4E3A;&#x5B9E;&#x5FC3;&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x63D2;&#x4EF6;&#x5DF2;&#x7ECF;&#x5F00;&#x59CB;&#x4E0E; gulp-livereload &#x914D;&#x5408;&#x5DE5;&#x4F5C;&#x4E86;&#x3002;</p>
-<h2 id="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"><a href="#&#x4F7F;&#x7528;&#x65B9;&#x6CD5;" class="headerlink" title="&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"></a>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h2><p>&#x4EE5;&#x4E0A;&#x90FD;&#x914D;&#x7F6E;&#x4E4B;&#x540E;&#xFF0C;&#x5F53;&#x4F60;&#x4F7F;&#x7528;&#x7F16;&#x8F91;&#x5668;&#x5BF9;&#x7B26;&#x5408;&#x4E4B;&#x524D;&#x7684;&#x76D1;&#x542C;&#x6761;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x4F5C;&#x51FA;&#x4FEE;&#x6539;&#xFF0C;&#x5E76; <code>save</code> &#x4E4B;&#x540E;&#xFF0C;Chrome &#x63D2;&#x4EF6;&#x4FBF;&#x4F1A;&#x5E2E;&#x4F60;&#x81EA;&#x52A8;&#x5237;&#x65B0;&#x4F60;&#x8981;&#x8C03;&#x8BD5;&#x7684;&#x7F51;&#x9875;&#x4E86;&#x3002;</p>
+<p>本教程使用的版本为  Laravel 5.1，其他  Laravel 5.* 版本应该也适用。<br>Windows 环境下没有进行过配置，不保证成功。</p>
+<h2><span id="修改-gulpfile">修改 gulpfile</span></h2><p>在  Laravel  项目文件中找到 gulpfile.js，在文件末尾加入以下代码，以下示例代码监听的是 *.blade.php 类型的文件修改动作，如需监听其他文件，作出类似的修改即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line">var livereload = require(&apos;gulp-livereload&apos;);</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * task - &apos;default&apos;</span><br><span class="line"> * executes &apos;live-monitor&apos;</span><br><span class="line"> */</span><br><span class="line">gulp.task(&apos;default&apos;, [&apos;live-monitor&apos;]);</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * task - &apos;laravel-views&apos;</span><br><span class="line"> * monitor laravel views</span><br><span class="line"> */</span><br><span class="line">gulp.task(&apos;laravel-views&apos;, function() &#123;</span><br><span class="line">    gulp.src(&apos;resources/views/**/*.blade.php&apos;)</span><br><span class="line">        .pipe(livereload());</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * task - &apos;live-monitor&apos;</span><br><span class="line"> * monitors everything</span><br><span class="line"> */</span><br><span class="line">gulp.task(&apos;live-monitor&apos;, function() &#123;</span><br><span class="line">    livereload.listen();</span><br><span class="line">    gulp.watch(&apos;resources/views/**/*.blade.php&apos;, [&apos;laravel-views&apos;]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2><span id="安装-gulp-livereload">安装 gulp-livereload</span></h2><p>首先，我们在项目的路径下，运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>完成之后，我们试着运行 gulp </p>
+<p>发现会报错<br>Error: Cannot find module ‘gulp-livereload’ </p>
+<p>此时，我们用下面一行安装 livereload，运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev gulp-livereload</span><br></pre></td></tr></table></figure>
+<h2><span id="运行-gulp">运行 gulp</span></h2><p>直接在项目路径下运行 <code>gulp</code> 命令即可，运行成功之后，会有类似下面一样的打印显示出来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Using gulpfile ~/Workspace/PHP/myTodoPractice/gulpfile.js</span><br><span class="line">Starting &apos;live-monitor&apos;...</span><br><span class="line">Finished &apos;live-monitor&apos; after 24 ms</span><br><span class="line">Starting &apos;default&apos;...</span><br><span class="line">Finished &apos;default&apos; after 13 μs</span><br></pre></td></tr></table></figure>
+<h2><span id="安装-chrome-插件">安装 Chrome 插件</span></h2><p>插件地址：<a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei" target="_blank" rel="noopener">Chrome 插件商店</a></p>
+<p>安装完成之后，在 Chrome 中打开我们想要自动刷新的网页（比如说 localhost 或者 homestead.app），左键单击插件图标。<br>此时，插件图标中心的圆圈符号会从空心变为实心，则说明插件已经开始与 gulp-livereload 配合工作了。</p>
+<h2><span id="使用方法">使用方法</span></h2><p>以上都配置之后，当你使用编辑器对符合之前的监听条件的文件作出修改，并 <code>save</code> 之后，Chrome 插件便会帮你自动刷新你要调试的网页了。</p>
 <link href="/css/prism-tomorrow.css" rel="stylesheet">
       
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://hexor.github.io/2016/12/16/Livereload-工具自动刷新前端页面/" data-id="ciwx1w7f7000591fyk5xulfqd" class="article-share-link">Share</a>
+      <a data-url="http://hexor.github.io/2016/12/16/Livereload-工具自动刷新前端页面/" data-id="cjpmas3ur0006r3sv3dx5ocll" class="article-share-link">Share</a>
       
         <a href="http://hexor.github.io/2016/12/16/Livereload-工具自动刷新前端页面/#disqus_thread" class="article-comment-link">留言</a>
       
@@ -147,6 +149,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2018/12/13/Laravel-使用-JWT-实现-API-Auth,-打造用户授权接口/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Laravel 使用 JWT 实现 API Auth, 打造用户授权接口
+        
+      </div>
+    </a>
   
   
     <a href="/2016/12/04/从-1-行代码开始，带你系统性的理解-Laravel-Service-Container-系统的核心概念/" id="article-nav-older" class="article-nav-link-wrap">
@@ -185,7 +196,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Laravel/">Laravel</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/API/">API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Auth/">Auth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dingo/">Dingo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/">JWT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Laravel/">Laravel</a></li></ul>
     </div>
   </div>
 
@@ -196,6 +207,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/12/13/Laravel-使用-JWT-实现-API-Auth,-打造用户授权接口/">Laravel 使用 JWT 实现 API Auth, 打造用户授权接口</a>
+          </li>
         
           <li>
             <a href="/2016/12/16/Livereload-工具自动刷新前端页面/">Livereload 工具自动刷新前端页面</a>
@@ -213,10 +228,6 @@
             <a href="/2016/11/29/我的-Laravel-学习过程/">我的 Laravel 学习过程</a>
           </li>
         
-          <li>
-            <a href="/2016/11/27/Hexo-使用手册/">Hexo 常用使用手册</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -230,7 +241,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 河童<br>
+      &copy; 2018 河童<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       <span id="busuanzi_container_site_uv_1">
   Total visited <span id="busuanzi_value_site_uv"></span> times.

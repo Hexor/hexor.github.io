@@ -4,11 +4,11 @@
  * @author Rose Pritchard
  */
 
-code[class*=&quot;language-&quot;],
-pre[class*=&quot;language-&quot;] {
+code[class*="language-"],
+pre[class*="language-"] {
 	color: #ccc;
 	background: none;
-	font-family: Consolas, Monaco, &apos;Andale Mono&apos;, &apos;Ubuntu Mono&apos;, monospace;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -28,19 +28,19 @@ pre[class*=&quot;language-&quot;] {
 }
 
 /* Code blocks */
-pre[class*=&quot;language-&quot;] {
+pre[class*="language-"] {
 	padding: 1em;
 	margin: .5em 0;
 	overflow: auto;
 }
 
-:not(pre) &gt; code[class*=&quot;language-&quot;],
-pre[class*=&quot;language-&quot;] {
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
 	background: #2d2d2d;
 }
 
 /* Inline code */
-:not(pre) &gt; code[class*=&quot;language-&quot;] {
+:not(pre) > code[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
 	white-space: normal;

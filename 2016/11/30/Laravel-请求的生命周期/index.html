@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <title>Laravel 请求的生命周期 | 河童的河</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="当你使用一个工具的时候, 如果你对这个工具的内部原理和构造有所了解, 那么在使用这个工具的时候, 就会更加的有信心, 工具用起来也会更加的得心应手.">
+<meta name="keywords" content="Laravel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Laravel 请求的生命周期">
 <meta property="og:url" content="http://hexor.github.io/2016/11/30/Laravel-请求的生命周期/index.html">
 <meta property="og:site_name" content="河童的河">
 <meta property="og:description" content="当你使用一个工具的时候, 如果你对这个工具的内部原理和构造有所了解, 那么在使用这个工具的时候, 就会更加的有信心, 工具用起来也会更加的得心应手.">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://hexor.github.io/images/laravel_lifecycle_overview.png">
-<meta property="og:updated_time" content="2016-11-30T16:09:02.000Z">
+<meta property="og:updated_time" content="2018-12-13T07:21:43.165Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Laravel 请求的生命周期">
 <meta name="twitter:description" content="当你使用一个工具的时候, 如果你对这个工具的内部原理和构造有所了解, 那么在使用这个工具的时候, 就会更加的有信心, 工具用起来也会更加的得心应手.">
 <meta name="twitter:image" content="http://hexor.github.io/images/laravel_lifecycle_overview.png">
-<meta name="twitter:creator" content="@/Hex_iN_gaMe">
+<meta name="twitter:creator" content="@&#x2F;Hex_iN_gaMe">
   
     <link rel="alternate" href="/atom.xml" title="河童的河" type="application/atom+xml">
   
@@ -31,7 +33,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container">
     <div id="wrap">
@@ -67,7 +69,7 @@
 
 
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://hexor.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://hexor.github.io"></form>
       </div>
     </div>
   </div>
@@ -75,7 +77,7 @@
       <div class="outer">
         <section id="main"><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<article id="post-Laravel-请求的生命周期" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-Laravel-请求的生命周期" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/11/30/Laravel-请求的生命周期/" class="article-date">
   <time datetime="2016-11-30T13:25:09.000Z" itemprop="datePublished">2016-11-30</time>
@@ -91,7 +93,7 @@
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="/images/laravel_lifecycle_overview.png" rel="gallery_ciwx1w7ez000291fy7i5z4ui9">
+      <a class="article-gallery-img fancybox" href="/images/laravel_lifecycle_overview.png" rel="gallery_cjpmas3uq0005r3sv7fedmqbw">
         <img src="/images/laravel_lifecycle_overview.png" itemprop="image">
       </a>
     
@@ -111,7 +113,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#x5F53;&#x4F60;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#x7684;&#x65F6;&#x5019;, &#x5982;&#x679C;&#x4F60;&#x5BF9;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x7684;&#x5185;&#x90E8;&#x539F;&#x7406;&#x548C;&#x6784;&#x9020;&#x6709;&#x6240;&#x4E86;&#x89E3;, &#x90A3;&#x4E48;&#x5728;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x7684;&#x65F6;&#x5019;, &#x5C31;&#x4F1A;&#x66F4;&#x52A0;&#x7684;&#x6709;&#x4FE1;&#x5FC3;, &#x5DE5;&#x5177;&#x7528;&#x8D77;&#x6765;&#x4E5F;&#x4F1A;&#x66F4;&#x52A0;&#x7684;&#x5F97;&#x5FC3;&#x5E94;&#x624B;. </p>
+        <p>当你使用一个工具的时候, 如果你对这个工具的内部原理和构造有所了解, 那么在使用这个工具的时候, 就会更加的有信心, 工具用起来也会更加的得心应手. </p>
 <a id="more"></a>
 <!-- toc -->
 <ul>
@@ -122,35 +124,35 @@
 </ul>
 </li>
 <li><a href="#focus-on-service-providers">Focus On Service Providers</a></li>
-<li><a href="#&#x60F3;&#x77E5;&#x9053;&#x66F4;&#x591A;">&#x60F3;&#x77E5;&#x9053;&#x66F4;&#x591A;</a></li>
+<li><a href="#想知道更多">想知道更多</a></li>
 </ul>
 <!-- tocstop -->
-<p>&#x4ECA;&#x5929;&#x9605;&#x8BFB;&#x4E86; Laravel &#x5B98;&#x65B9;&#x7684;<a href="https://laravel.com/docs/5.2/lifecycle" target="_blank" rel="external">&#x751F;&#x547D;&#x5468;&#x671F;&#x6587;&#x6863;</a>. &#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x53EF;&#x4EE5;&#x770B;&#x505A;&#x662F;&#x5BF9;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x7684;&#x7FFB;&#x8BD1;, &#x4F46;&#x662F;&#x4E5F;&#x52A0;&#x5165;&#x4E86;&#x5F53;&#x524D;&#x6211;&#x5BF9; Laravel &#x8BF7;&#x6C42;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x7406;&#x89E3;, &#x540C;&#x65F6;&#x4E5F;&#x7B97;&#x662F;&#x52A0;&#x6DF1;&#x6211;&#x5BF9; Laravel &#x6574;&#x4F53;&#x67B6;&#x6784;&#x7684;&#x5370;&#x8C61;.</p>
-<h2 id="first-things"><a href="#First-Things" class="headerlink" title="First Things"></a>First Things</h2><p>&#x9996;&#x5148;, &#x4ECE;&#x8BF7;&#x6C42;&#x8BF4;&#x8D77;, &#x6240;&#x6709;&#x7684;&#x6765;&#x81EA;&#x4E8E; web &#x670D;&#x52A1;&#x5668; ( Apache / Nginx ) &#x7684;&#x8BF7;&#x6C42;, &#x90FD;&#x5C06;&#x4F1A;&#x88AB;&#x8F6C;&#x53D1;&#x5230; <code>public/index.php</code> &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5904;&#x7406;.</p>
-<p><code>index.php</code> &#x4E2D;&#x4EE3;&#x7801;&#x4E0D;&#x591A;, &#x4F46;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x8D77;&#x59CB;&#x70B9;, &#x4ECE;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5F00;&#x59CB;, Laravel &#x6846;&#x67B6;&#x7684;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x5C31;&#x4F1A;&#x5F00;&#x59CB;&#x9646;&#x7EED;&#x52A0;&#x8F7D;&#x4E86;.<br>&#x540C;&#x65F6;, <code>index.php</code> &#x4ECE; <code>bootstrap/app.php</code> &#x83B7;&#x5F97;&#x4E86;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;, &#x800C;&#x8FD9;&#x4E5F;&#x662F; Laravel &#x6846;&#x67B6;&#x5728;&#x5F97;&#x5230;&#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#x505A;&#x7684;&#x7B2C;&#x4E00;&#x4EF6;&#x4E8B;.</p>
+<p>今天阅读了 Laravel 官方的<a href="https://laravel.com/docs/5.2/lifecycle" target="_blank" rel="noopener">生命周期文档</a>. 这篇文章可以看做是对官方文档的翻译, 但是也加入了当前我对 Laravel 请求生命周期的理解, 同时也算是加深我对 Laravel 整体架构的印象.</p>
+<h2><span id="first-things">First Things</span></h2><p>首先, 从请求说起, 所有的来自于 web 服务器 ( Apache / Nginx ) 的请求, 都将会被转发到 <code>public/index.php</code> 这个文件处理.</p>
+<p><code>index.php</code> 中代码不多, 但这个文件是一个起始点, 从这个文件开始, Laravel 框架的其余部分就会开始陆续加载了.<br>同时, <code>index.php</code> 从 <code>bootstrap/app.php</code> 获得了一个实例, 而这也是 Laravel 框架在得到请求之后做的第一件事.</p>
 <p><br></p>
-<h2 id="http-console-kernels"><a href="#HTTP-Console-Kernels" class="headerlink" title="HTTP / Console Kernels"></a>HTTP / Console Kernels</h2><p>&#x901A;&#x8FC7;&#x4E4B;&#x524D;&#x5F97;&#x5230;&#x7684;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;, Laravel &#x4FBF;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;&#x5185;&#x6838;&#x4E86;.<br>Laravel &#x672C;&#x8EAB;&#x63D0;&#x4F9B;2&#x79CD;&#x5185;&#x6838;, HTTP &#x5185;&#x6838;&#x548C; Console &#x5185;&#x6838;, 2&#x79CD;&#x5185;&#x6838;&#x5206;&#x522B;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x8BF7;&#x6C42;. &#x6211;&#x7406;&#x89E3;&#x7684;&#x662F; HTTP &#x5185;&#x6838;&#x53EF;&#x80FD;&#x662F;&#x7528;&#x6765;&#x5904;&#x7406; HTTP &#x8BF7;&#x6C42;, &#x800C; Console &#x5185;&#x6838;&#x5219;&#x7528;&#x6765;&#x5904;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x53D1;&#x9001;&#x6765;&#x7684;&#x8BF7;&#x6C42;. &#x6587;&#x7AE0;&#x4E2D;&#x6682;&#x65F6;&#x53EA;&#x8BA9;&#x6211;&#x4EEC;&#x5173;&#x6CE8;&#x4E8E; HTTP &#x5185;&#x6838;, &#x53EF;&#x80FD;&#x8FD9;&#x4E5F;&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;.</p>
-<p>HTTP &#x5185;&#x6838;&#x6587;&#x4EF6;&#x4F4D;&#x4E8E; <code>app/Http/Kernel.php</code>, &#x7EE7;&#x627F;&#x81EA; <code>Illuminate\Foundation\Http\Kernel</code> Kernel &#x8FD9;&#x4E2A; Class.</p>
-<p>&#x5728; <code>Illuminate\Foundation\Http\Kernel</code> Kernel Class &#x4E2D;, &#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x7531; <code>bootstrappers</code> &#x7EC4;&#x6210;&#x7684;&#x6570;&#x7EC4;, &#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x904D;&#x5386;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A; <code>bootstrapper</code>, &#x5E76;&#x6267;&#x884C;&#x6BCF;&#x4E00;&#x4E2A; <code>bootstrapper</code>. &#x8FD9;&#x4E9B; <code>bootstrappers</code> &#x5728;&#x8BF7;&#x6C42;&#x88AB;&#x771F;&#x6B63;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&#x4E4B;&#x524D;, &#x4F1A;&#x6267;&#x884C;&#x4E00;&#x4E9B;&#x5305;&#x62EC;&#x9519;&#x8BEF;&#x5904;&#x7406;, &#x65E5;&#x5FD7;&#x8BB0;&#x5F55;, &#x786E;&#x5B9A;&#x5E94;&#x7528;&#x73AF;&#x5883;&#x7B49;&#x914D;&#x7F6E;&#x4EFB;&#x52A1;.</p>
-<p>HTTP &#x5185;&#x6838;&#x8FD8;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x5217;&#x8868; ( a list of HTTP middleware ), &#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#x5728;&#x88AB;&#x5904;&#x7406;&#x4E4B;&#x524D;, &#x90FD;&#x9700;&#x8981;&#x5148;&#x901A;&#x8FC7;&#x8FD9;&#x4E9B;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x5904;&#x7406;. &#x8FD9;&#x4E9B;&#x4E2D;&#x95F4;&#x4EF6;&#x53EF;&#x4EE5;&#x5904;&#x7406; HTTP session &#x7684;&#x8BFB;&#x5199;, &#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x670D;&#x52A1;&#x5668;&#x5F53;&#x524D;&#x662F;&#x5426;&#x5904;&#x4E8E;&#x7EF4;&#x62A4;&#x6A21;&#x5F0F;, &#x9A8C;&#x8BC1; CSRF token ( &#x4E3A;&#x4E86;&#x4FDD;&#x62A4;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x53D7; <a href="https://laravel.com/docs/5.2/routing#csrf-protection" target="_blank" rel="external">CSRF &#x653B;&#x51FB;</a> ) &#x7B49;&#x7B49;&#x529F;&#x80FD;.</p>
-<p>&#x6700;&#x540E;, HTTP &#x5185;&#x6838;&#x6700;&#x7EC8;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;&#x65B9;&#x6CD5; ( <code>handle</code> method) &#x770B;&#x8D77;&#x6765;&#x8FD8;&#x662F;&#x5F88;&#x7B80;&#x5355;&#x7684;. &#x5355;&#x7EAF;&#x7684;&#x63A5;&#x53D7;&#x4E00;&#x4E2A; <code>Request</code> &#x4EE5;&#x53CA; &#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>Response</code>.</p>
-<p>&#x4E0A;&#x9762;&#x8FD9;&#x4E9B;&#x6982;&#x5FF5;&#x6709;&#x7684;&#x5730;&#x65B9;&#x4E5F;&#x8BB8;&#x6211;&#x73B0;&#x5728;&#x8FD8;&#x65E0;&#x6CD5;&#x8BE6;&#x7EC6;&#x7684;&#x7406;&#x89E3;, &#x60F3;&#x8981;&#x5145;&#x5206;&#x7684;&#x7406;&#x89E3;, &#x5C31;&#x9700;&#x8981;&#x53BB;&#x770B; Laravel &#x7684;&#x6E90;&#x7801;&#x4E86;. &#x4F46;&#x662F;&#x76EE;&#x524D;&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x53EF;&#x4EE5;&#x5148;&#x4E0D;&#x9700;&#x8981;&#x770B;&#x6E90;&#x7801;.<br>&#x53EA;&#x9700;&#x8981;&#x77E5;&#x9053;, &#x5185;&#x6838;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x9ED1;&#x7BB1;, &#x53EF;&#x4EE5;&#x4E3A;&#x4F60;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x5668;&#x7684;&#x6240;&#x6709;&#x529F;&#x80FD;, &#x800C;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x7ED9;&#x5185;&#x6838; HTTP &#x8BF7;&#x6C42;, &#x9ED1;&#x7BB1;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE; HTTP &#x54CD;&#x5E94;&#x4E86;.</p>
-<h3 id="service-providers"><a href="#Service-Providers" class="headerlink" title="Service Providers"></a>Service Providers</h3><p>&#x5728; Kernel Class <code>bootstrappers</code> &#x6570;&#x7EC4;&#x4E2D;, &#x6700;&#x91CD;&#x8981;&#x7684; <code>bootstrapper</code> &#x4EFB;&#x52A1;&#x5C31;&#x662F;&#x8F7D;&#x5165; <code>service provider</code>, &#x8FD9;&#x9879;&#x4EFB;&#x52A1;&#x7531; RegisterProviders &#x548C; BootProviders 2&#x4E2A; <code>bootstrapper</code> &#x6765;&#x5B8C;&#x6210;.</p>
-<p>&#x6240;&#x6709;&#x7684; service provider &#x90FD;&#x4F1A;&#x5728; <code>config/app.php</code> &#x4E2D;&#x7684; <code>providers</code> &#x4E2D;&#x8FDB;&#x884C;&#x914D;&#x7F6E;. &#x8FD9;&#x4E9B; &#x2018;providers&#x2019; &#x7684;&#x542F;&#x52A8;&#x65B9;&#x5F0F;&#x662F;: &#x9996;&#x5148;&#x6240;&#x6709;&#x7684; provider &#x90FD;&#x4F1A;&#x6267;&#x884C; register &#x65B9;&#x6CD5;, &#x4E00;&#x65E6;&#x6240;&#x6709;&#x7684; provider &#x90FD;&#x6267;&#x884C;&#x5B8C;&#x6BD5; register &#x65B9;&#x6CD5;, <code>boot</code> &#x65B9;&#x6CD5;&#x5C31;&#x4F1A;&#x8C03;&#x7528;.</p>
-<p>Service Provider &#x7684;&#x4F5C;&#x7528;&#x975E;&#x5E38;&#x91CD;&#x8981;, &#x5B83;&#x4F1A;&#x542F;&#x52A8;&#x6846;&#x67B6;&#x7684;&#x6240;&#x6709;&#x7EC4;&#x4EF6;, &#x5305;&#x62EC;&#x6570;&#x636E;&#x5E93;, &#x961F;&#x5217;, &#x6570;&#x636E;&#x9A8C;&#x8BC1;, &#x8DEF;&#x7531;&#x7EC4;&#x4EF6;&#x7B49;. &#x4E5F;&#x6B63;&#x662F;&#x7531;&#x4E8E; Service Provider &#x542F;&#x52A8;&#x548C;&#x914D;&#x7F6E;&#x4E86;&#x6240;&#x6709; Laravel &#x6846;&#x67B6;&#x7684;&#x7279;&#x6027;&#x548C;&#x529F;&#x80FD;, &#x6240;&#x4EE5;&#x624D;&#x8BA9;&#x5B83;&#x6210;&#x4E3A;&#x4E86;&#x6574;&#x4E2A; Laravel &#x542F;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x6700;&#x7EC8;&#x8981;&#x7684;&#x90E8;&#x5206;.</p>
-<h3 id="dispatch-request"><a href="#Dispatch-Request" class="headerlink" title="Dispatch Request"></a>Dispatch Request</h3><p>&#x4E00;&#x65E6;&#x6240;&#x6709;&#x7684; <code>bootstrapper</code> &#x90FD;&#x6267;&#x884C;&#x5B8C;, &#x6240;&#x6709;&#x7684; Service Provider &#x90FD;&#x6CE8;&#x518C;&#x5B8C;&#x4E4B;&#x540E;, &#x8BF7;&#x6C42;&#x7EC8;&#x4E8E;&#x5230;&#x8FBE;&#x4E86; <code>router</code>, <code>router</code> &#x5C06;&#x4F1A;&#x628A;&#x5F97;&#x5230;&#x7684;&#x8BF7;&#x6C42;&#x5206;&#x53D1;&#x7ED9;&#x5176;&#x4E0B;&#x4E00;&#x7EA7; ( &#x901A;&#x5E38;&#x662F;&#x4E00;&#x4E2A; controller &#x6216;&#x8005;&#x53E6;&#x4E00;&#x4E2A; router ), &#x5F53;&#x7136;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4EFB;&#x4F55; router &#x76F8;&#x5173;&#x7684; &#x4E2D;&#x95F4;&#x4EF6;, &#x4E2D;&#x95F4;&#x4EF6;&#x4E5F;&#x4F1A;&#x5148;&#x6267;&#x884C;.</p>
+<h2><span id="http-console-kernels">HTTP / Console Kernels</span></h2><p>通过之前得到的这个实例, Laravel 便可以生成处理请求的内核了.<br>Laravel 本身提供2种内核, HTTP 内核和 Console 内核, 2种内核分别处理不同类型的请求. 我理解的是 HTTP 内核可能是用来处理 HTTP 请求, 而 Console 内核则用来处理控制台中发送来的请求. 文章中暂时只让我们关注于 HTTP 内核, 可能这也是最常用的.</p>
+<p>HTTP 内核文件位于 <code>app/Http/Kernel.php</code>, 继承自 <code>Illuminate\Foundation\Http\Kernel</code> Kernel 这个 Class.</p>
+<p>在 <code>Illuminate\Foundation\Http\Kernel</code> Kernel Class 中, 定义了一个由 <code>bootstrappers</code> 组成的数组, 会有一个函数遍历数组中的每个 <code>bootstrapper</code>, 并执行每一个 <code>bootstrapper</code>. 这些 <code>bootstrappers</code> 在请求被真正的业务逻辑处理之前, 会执行一些包括错误处理, 日志记录, 确定应用环境等配置任务.</p>
+<p>HTTP 内核还定义了一个中间件的列表 ( a list of HTTP middleware ), 所有的请求在被处理之前, 都需要先通过这些中间件的处理. 这些中间件可以处理 HTTP session 的读写, 可以判断服务器当前是否处于维护模式, 验证 CSRF token ( 为了保护服务器不受 <a href="https://laravel.com/docs/5.2/routing#csrf-protection" target="_blank" rel="noopener">CSRF 攻击</a> ) 等等功能.</p>
+<p>最后, HTTP 内核最终用于处理请求的方法 ( <code>handle</code> method) 看起来还是很简单的. 单纯的接受一个 <code>Request</code> 以及 返回一个 <code>Response</code>.</p>
+<p>上面这些概念有的地方也许我现在还无法详细的理解, 想要充分的理解, 就需要去看 Laravel 的源码了. 但是目前这个阶段可以先不需要看源码.<br>只需要知道, 内核就是一个黑箱, 可以为你提供服务器的所有功能, 而你只需要传给内核 HTTP 请求, 黑箱就会返回 HTTP 响应了.</p>
+<h3><span id="service-providers">Service Providers</span></h3><p>在 Kernel Class <code>bootstrappers</code> 数组中, 最重要的 <code>bootstrapper</code> 任务就是载入 <code>service provider</code>, 这项任务由 RegisterProviders 和 BootProviders 2个 <code>bootstrapper</code> 来完成.</p>
+<p>所有的 service provider 都会在 <code>config/app.php</code> 中的 <code>providers</code> 中进行配置. 这些 ‘providers’ 的启动方式是: 首先所有的 provider 都会执行 register 方法, 一旦所有的 provider 都执行完毕 register 方法, <code>boot</code> 方法就会调用.</p>
+<p>Service Provider 的作用非常重要, 它会启动框架的所有组件, 包括数据库, 队列, 数据验证, 路由组件等. 也正是由于 Service Provider 启动和配置了所有 Laravel 框架的特性和功能, 所以才让它成为了整个 Laravel 启动过程中最终要的部分.</p>
+<h3><span id="dispatch-request">Dispatch Request</span></h3><p>一旦所有的 <code>bootstrapper</code> 都执行完, 所有的 Service Provider 都注册完之后, 请求终于到达了 <code>router</code>, <code>router</code> 将会把得到的请求分发给其下一级 ( 通常是一个 controller 或者另一个 router ), 当然如果设置任何 router 相关的 中间件, 中间件也会先执行.</p>
 <p><br></p>
-<h2 id="focus-on-service-providers"><a href="#Focus-On-Service-Providers" class="headerlink" title="Focus On Service Providers"></a>Focus On Service Providers</h2><p>&#x5B98;&#x65B9;&#x6587;&#x6863;&#x8BF4;, &#x5927;&#x5BB6;&#x4E00;&#x5B9A;&#x8981;&#x628A;&#x6CE8;&#x610F;&#x529B;&#x653E;&#x5230; Service Providers &#x4E0A;&#x554A;. &#x6BD5;&#x7ADF;&#x6574;&#x4E2A; Laravel &#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#x5C31;&#x662F;, &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;, &#x6CE8;&#x518C;&#x6240;&#x6709;&#x7684; Service Provider, &#x8BF7;&#x6C42;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x88AB;&#x5904;&#x7406;&#x4E86;. </p>
-<p>&#x7CFB;&#x7EDF;&#x7684;&#x9ED8;&#x8BA4; Service Providers &#x653E;&#x5728; <code>app/Providers</code> &#x76EE;&#x5F55;&#x4E0B;. &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;, <code>AppServiceProvider</code> &#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x7A7A;&#x7684;&#x6587;&#x4EF6;, &#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x653E;&#x7F6E;&#x81EA;&#x5B9A;&#x4E49;&#x7684; &#x521D;&#x59CB;&#x5316;&#x4EFB;&#x52A1; &#x6216;&#x8005; &#x7ED1;&#x5B9A;&#x4E00;&#x4E2A; service container, &#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x505A;&#x8FD9;&#x4E9B;&#x4E8B;&#x60C5;&#x7684;&#x5408;&#x9002;&#x4F4D;&#x7F6E;. </p>
-<p>&#x4F46;&#x662F;&#x5982;&#x679C;&#x5BF9;&#x4E00;&#x4E2A;&#x5927;&#x578B;&#x7684;&#x9879;&#x76EE;&#x6765;&#x8BF4;, &#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x4F60;&#x81EA;&#x5DF1;&#x7684; Service Provider &#x4E5F;&#x8BB8;&#x66F4;&#x597D;, &#x4ECE;&#x800C;&#x5728;&#x6BCF;&#x4E2A; Service Provider &#x4E2D;&#x8FDB;&#x884C;&#x7C92;&#x5EA6;&#x66F4;&#x7EC6;&#x5206;&#x7684;&#x521D;&#x59CB;&#x5316;&#x4EFB;&#x52A1;.</p>
+<h2><span id="focus-on-service-providers">Focus On Service Providers</span></h2><p>官方文档说, 大家一定要把注意力放到 Service Providers 上啊. 毕竟整个 Laravel 的工作流程简单来说就是, 创建一个实例, 注册所有的 Service Provider, 请求就可以开始被处理了. </p>
+<p>系统的默认 Service Providers 放在 <code>app/Providers</code> 目录下. 默认情况下, <code>AppServiceProvider</code> 是一个比较空的文件, 如果你想要放置自定义的 初始化任务 或者 绑定一个 service container, 这里就是做这些事情的合适位置. </p>
+<p>但是如果对一个大型的项目来说, 创建多个你自己的 Service Provider 也许更好, 从而在每个 Service Provider 中进行粒度更细分的初始化任务.</p>
 <p><br></p>
-<h2 id="&#x60F3;&#x77E5;&#x9053;&#x66F4;&#x591A;"><a href="#&#x60F3;&#x77E5;&#x9053;&#x66F4;&#x591A;" class="headerlink" title="&#x60F3;&#x77E5;&#x9053;&#x66F4;&#x591A;"></a>&#x60F3;&#x77E5;&#x9053;&#x66F4;&#x591A;</h2><p><a href="https://laravel.com/docs/5.2/lifecycle" target="_blank" rel="external">Laravel &#x5B98;&#x65B9;&#x6587;&#x6863;: Request Lifecycle</a><br><a href="https://laravel-china.org/topics/2909" target="_blank" rel="external">Laravel &#x5B66;&#x4E60;&#x7B14;&#x8BB0;&#x4E4B; Bootstrap &#x6E90;&#x7801;&#x89E3;&#x6790;</a></p>
+<h2><span id="想知道更多">想知道更多</span></h2><p><a href="https://laravel.com/docs/5.2/lifecycle" target="_blank" rel="noopener">Laravel 官方文档: Request Lifecycle</a><br><a href="https://laravel-china.org/topics/2909" target="_blank" rel="noopener">Laravel 学习笔记之 Bootstrap 源码解析</a></p>
 <link href="/css/prism-tomorrow.css" rel="stylesheet">
       
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://hexor.github.io/2016/11/30/Laravel-请求的生命周期/" data-id="ciwx1w7ez000291fy7i5z4ui9" class="article-share-link">Share</a>
+      <a data-url="http://hexor.github.io/2016/11/30/Laravel-请求的生命周期/" data-id="cjpmas3uq0005r3sv7fedmqbw" class="article-share-link">Share</a>
       
         <a href="http://hexor.github.io/2016/11/30/Laravel-请求的生命周期/#disqus_thread" class="article-comment-link">留言</a>
       
@@ -215,7 +217,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Laravel/">Laravel</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/API/">API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Auth/">Auth</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Dingo/">Dingo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JWT/">JWT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Laravel/">Laravel</a></li></ul>
     </div>
   </div>
 
@@ -226,6 +228,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/12/13/Laravel-使用-JWT-实现-API-Auth,-打造用户授权接口/">Laravel 使用 JWT 实现 API Auth, 打造用户授权接口</a>
+          </li>
         
           <li>
             <a href="/2016/12/16/Livereload-工具自动刷新前端页面/">Livereload 工具自动刷新前端页面</a>
@@ -243,10 +249,6 @@
             <a href="/2016/11/29/我的-Laravel-学习过程/">我的 Laravel 学习过程</a>
           </li>
         
-          <li>
-            <a href="/2016/11/27/Hexo-使用手册/">Hexo 常用使用手册</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -260,7 +262,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 河童<br>
+      &copy; 2018 河童<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
       <span id="busuanzi_container_site_uv_1">
   Total visited <span id="busuanzi_value_site_uv"></span> times.
